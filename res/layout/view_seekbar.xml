@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.sczn.wearlauncher.view.SeekBarView 
+        xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_centerInParent="true"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center">
+	    
+	    <TextView 
+	        android:id="@+id/seekbar_title"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/logo"/>
+	    
+	    <SeekBar 
+	        android:id="@+id/seekbar_bar"
+	        style="@style/style_wearlauncher_seekbar"
+	        android:layout_below="@id/seekbar_title"
+	        android:layout_width="@dimen/seek_bar_width"
+	        android:paddingLeft="@dimen/seek_bar_thumb_offset"
+	        android:paddingRight="@dimen/seek_bar_thumb_offset"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"/>
+	    
+	
+	    <ImageView 
+	        android:id="@+id/seekbar_down"
+	        android:layout_below="@+id/seekbar_bar"
+	        android:layout_alignLeft="@+id/seekbar_bar"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:visibility="gone"
+	        android:src="@drawable/icon_down"/>
+	    
+	    <ImageView 
+	        android:id="@+id/seekbar_up"
+	        android:layout_below="@+id/seekbar_bar"
+	        android:layout_alignRight="@+id/seekbar_bar"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:visibility="gone"
+	        android:src="@drawable/icon_up"/>
+	    
+	    <TextView 
+	        android:id="@+id/seekbar_level"
+	        android:layout_below="@+id/seekbar_bar"
+	        android:layout_toRightOf="@id/seekbar_down"
+	        android:layout_toLeftOf="@id/seekbar_up"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:visibility="gone"
+	        android:text="@string/logo"/>
+	    
+	    
+	
+	</com.sczn.wearlauncher.view.SeekBarView>

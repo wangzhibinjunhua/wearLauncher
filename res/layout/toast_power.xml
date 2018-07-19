@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    
+    <ImageView 
+        android:id="@+id/powerImage"
+        android:layout_width="@dimen/toast_power_image_size"
+        android:layout_height="@dimen/toast_power_image_size"
+        android:paddingBottom="@dimen/toast_power_image_pading"
+        android:scaleType="centerInside"/>
+    
+    <TextView 
+        android:id="@+id/powerState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        style="@style/style_text_medium"/>
+</LinearLayout>

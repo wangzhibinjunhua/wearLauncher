@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.sczn.wearlauncher.card.healthalarm.ViewTimePicker
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wearlauncher="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="horizontal">
+    
+    <com.sczn.wearlauncher.view.LetterIndexView
+        android:id="@+id/alarm_timepicker_hour"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="@null"
+        wearlauncher:letters="@array/time_pick_hour"
+        wearlauncher:showcount="3"
+        wearlauncher:textsize_normal="15sp"
+        wearlauncher:textsize_selected="18sp"
+        wearlauncher:color_normal="#888888"
+        wearlauncher:color_selected="#ffffff"
+        wearlauncher:need_loop="true"/>
+    
+    <View 
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:background="#ffffff"
+        android:layout_gravity="center"/>
+    
+    <com.sczn.wearlauncher.view.LetterIndexView
+        android:id="@+id/alarm_timepicker_minuter"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="@null"
+        wearlauncher:letters="@array/time_pick_minuter"
+        wearlauncher:showcount="3"
+        wearlauncher:textsize_normal="15sp"
+        wearlauncher:textsize_selected="18sp"
+        wearlauncher:color_normal="#888888"
+        wearlauncher:color_selected="#ffffff"
+        wearlauncher:need_loop="true"/>
+
+</com.sczn.wearlauncher.card.healthalarm.ViewTimePicker>

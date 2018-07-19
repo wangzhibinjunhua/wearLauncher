@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/altitude_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	  
+    <com.sczn.wearlauncher.view.ScrollerTextView 
+        android:id="@+id/bt_connect_android_title"
+        style="@style/title_style"
+        android:text="@string/bt_connecet_android"/>
+    
+    <com.sczn.wearlauncher.view.ScrollerTextView 
+        android:id="@+id/bt_qrcode_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/bt_connect_text_gap"
+        android:layout_marginBottom="@dimen/bt_connect_qrcode_padding_bottom"
+        android:layout_marginLeft="@dimen/bt_connect_guide_padding_left"
+        android:layout_marginRight="@dimen/bt_connect_guide_padding_left"
+        android:textColor="@color/text_bt_connect_warn"
+        android:textSize="@dimen/bt_connect_small_text"
+        android:text="@string/bt_connecet_qrcode_enlarge"/>
+    
+    <com.sczn.wearlauncher.view.ClickIcon
+        android:id="@+id/bt_connect_qrcode"
+        android:layout_above="@id/bt_qrcode_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/bt_connect_qrcode"/>
+    
+    <ScrollView 
+        android:layout_below="@id/bt_connect_android_title"
+	    android:layout_above="@id/bt_connect_qrcode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/bt_connect_text_gap"
+	    android:layout_marginBottom="@dimen/bt_connect_text_gap"
+	    android:layout_marginLeft="@dimen/bt_connect_guide_padding_left"
+	    android:layout_marginRight="@dimen/bt_connect_guide_padding_left"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+        
+        <TextView 
+	        android:id="@+id/bt_connect_android_guide"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        style="@style/style_text_medium"
+	        android:textSize="@dimen/bt_connect_normal_text"/>
+    </ScrollView>
+    
+    
+</RelativeLayout>

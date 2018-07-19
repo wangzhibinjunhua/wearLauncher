@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources >
+    <color name="red">#ff0000</color>
+    <color name="green">#00ff00</color>
+    <color name="blue">#0000ff</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="yellow">#ffff00</color>
+    
+    <color name="normal_text">#ffffff</color>
+    <color name="title_text">#ffffff</color>
+    
+    <color name="diliver_title">#000088</color>
+    
+    <color name="text_bt_connect_hilight">#f27c1c</color>
+    <color name="text_bt_connect_warn">#999999</color>
+    
+    
+    <color name="main_bg">#000000</color>
+    <color name="transport">#00000000</color>
+    <color name="dialog_frament_bg">#88000000</color>
+    
+    <!-- status -->
+    <color name="status_timer_lable">#b8b8b8</color>
+    <color name="status_timer_date">#ffffff</color>
+    <color name="status_timer_diliver">#202020</color>
+    <color name="status_battery_text_color_normal">#81dd3e</color>
+    <color name="status_battery_text_color_warn">#f31f60</color>
+    
+    <!-- notification -->
+    <color name="item_notification_diliver">#0000ff</color>
+    
+    <!-- viewpager indicator -->
+    <color name="indicator_selected">#ffffff</color>
+    <color name="indicator_normal">#888888</color>
+    
+    <!-- cards -->
+    <color name="circle_bar_bg">#333333</color>
+    <color name="circle_bar_active">#8383e9</color>
+    
+    <!-- card activity -->
+    <color name="alt_path_bottom_color">#182c44</color>
+    <color name="alt_path_top_color">#4dd2b1</color>
+    <color name="air_pressure_path_bottom_color">#182c44</color>
+    <color name="air_pressure_path_top_color">#316de3</color>
+    
+    <color name="sleep_deep">#5e5eeb</color>
+    <color name="sleep_light">#00baff</color>
+    
+    <color name="heartrate_value">#00baff</color>
+    
+    <!-- healthalarm -->
+    <color name="healthalarm_timer_picker_selected">#ffffff</color>
+    <color name="healthalarm_timer_picker_normal">#888888</color>
+</resources>

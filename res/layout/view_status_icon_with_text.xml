@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.sczn.wearlauncher.view.status.StatusIconWithText xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wearlauncher="http://schemas.android.com/apk/res-auto"
+    style="@style/style_status_icon_contain"
+    android:orientation="vertical">
+    
+    <com.sczn.wearlauncher.view.ClickIcon 
+        android:id="@+id/status_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    
+    <com.sczn.wearlauncher.view.DINCondTextView 
+        android:id="@+id/status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/normal_text"/>
+</com.sczn.wearlauncher.view.status.StatusIconWithText>

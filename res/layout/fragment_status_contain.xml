@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transport">
+    
+    <com.sczn.wearlauncher.view.HorizalViewPager
+        android:id="@+id/viewpager"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    
+    <FrameLayout 
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_time_contain_height"
+        android:paddingLeft="@dimen/status_time_contain_padding"
+        android:paddingRight="@dimen/status_time_contain_padding">
+        
+        <LinearLayout 
+	        android:layout_gravity="top"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:orientation="horizontal"
+	        android:gravity="center_vertical">
+	        
+	        <com.sczn.wearlauncher.view.LanTingTextView
+	            android:id="@+id/status_time_date" 
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="2"
+	            android:textColor="@color/status_timer_lable"
+	            android:textSize="@dimen/status_time_textsize"/>
+	        <com.sczn.wearlauncher.view.LanTingTextView
+	            android:id="@+id/status_time_weekday" 
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:textColor="@color/status_timer_lable"
+	            android:textSize="@dimen/status_time_textsize"/>
+	        <com.sczn.wearlauncher.view.LanTingTextView
+	            android:id="@+id/status_time_time" 
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="end"
+	            android:textColor="@color/status_timer_lable"
+	            android:textSize="@dimen/status_time_textsize"/>
+	    </LinearLayout>
+	    
+	    <View 
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:layout_gravity="bottom"
+	        android:background="@color/status_timer_diliver"/>
+    </FrameLayout>
+    
+
+    <com.sczn.wearlauncher.view.ViewPagerIndicator 
+	    android:id="@+id/status_page_ind"
+	    android:layout_gravity="bottom|center_horizontal"
+	    android:layout_width="@dimen/indicator_dot_all_width"
+	    android:layout_height="wrap_content"
+	    android:minHeight="@dimen/title_height"/>
+
+</FrameLayout>

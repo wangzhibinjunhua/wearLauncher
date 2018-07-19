@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <com.sczn.wearlauncher.view.LanTingTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/title_top_padding"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_normal"
+        android:text="@string/current_air_pressure_index_text"/>
+
+    <LinearLayout
+        android:id="@+id/values_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/values_top_padding"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <com.sczn.wearlauncher.view.DINCondTextView
+            android:id="@+id/current_air_pressure_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#316de3"
+            android:textSize="@dimen/text_size_largest"/>
+        <com.sczn.wearlauncher.view.LanTingTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#316de3"
+            android:textSize="@dimen/text_size_large"
+            android:text="@string/pressure_unit"/>
+    </LinearLayout>
+
+    <com.sczn.wearlauncher.view.card.ChartView
+        android:id="@+id/chart_line"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/values_ll"
+        app:maxValue="2000"
+        app:dividerCount="2"
+        app:pathStartColor="@color/air_pressure_path_top_color"
+        app:pathEndColor="@color/air_pressure_path_bottom_color"/>
+
+    <com.sczn.wearlauncher.view.LanTingTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/title_bottom_padding"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_normal"
+        android:text="@string/recent_air_pressure_text"/>
+</RelativeLayout>

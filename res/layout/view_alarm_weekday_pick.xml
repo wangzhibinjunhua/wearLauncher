@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.sczn.wearlauncher.card.healthalarm.ViewWeekdayPick xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    
+    <TextView 
+        android:id="@+id/weekday_mo"
+        style="@style/pick_weekday_style"
+        android:text="@string/pick_weekday_mo"/>
+    <TextView 
+        android:id="@+id/weekday_tu"
+        style="@style/pick_weekday_style"
+        android:text="@string/pick_weekday_tu"/>
+    <TextView 
+        android:id="@+id/weekday_we"
+        style="@style/pick_weekday_style"
+        android:text="@string/pick_weekday_we"/>
+    <TextView 
+        android:id="@+id/weekday_th"
+        style="@style/pick_weekday_style"
+        android:text="@string/pick_weekday_th"/>
+    <TextView 
+        android:id="@+id/weekday_fr"
+        style="@style/pick_weekday_style"
+        android:text="@string/pick_weekday_fr"/>
+    <TextView 
+        android:id="@+id/weekday_sa"
+        style="@style/pick_weekday_style"
+        android:text="@string/pick_weekday_sa"/>
+    <TextView 
+        android:id="@+id/weekday_su"
+        style="@style/pick_weekday_style"
+        android:text="@string/pick_weekday_su"/>
+</com.sczn.wearlauncher.card.healthalarm.ViewWeekdayPick>

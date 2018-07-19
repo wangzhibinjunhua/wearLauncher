@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+<LinearLayout 
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        
+        <View android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="@integer/circle_menu_pager_weight_clock_space"/>
+        
+        <com.sczn.wearlauncher.view.menu.MenuClockView 
+            android:id="@+id/menu_circle_clock"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="@integer/circle_menu_pager_weight_clock_size"/>
+        
+        <View android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="@integer/circle_menu_pager_weight_clock_space"/>
+        
+    </LinearLayout>
+ -->
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transport">
+    
+    
+    <com.sczn.wearlauncher.view.PagerRecylerView
+        android:id="@+id/menu_circle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    
+</FrameLayout>

@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <com.sczn.wearlauncher.view.LanTingTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/title_top_padding"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_normal"
+        android:text="@string/today_steps"/>
+
+    <LinearLayout
+        android:id="@+id/values_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/values_top_padding"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <com.sczn.wearlauncher.view.DINCondTextView
+            android:id="@+id/today_steps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#44e36b"
+            android:textSize="@dimen/text_size_largest"/>
+    </LinearLayout>
+
+    <com.sczn.wearlauncher.view.card.ChartView
+        android:id="@+id/chart_line"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/values_ll"
+        app:maxValue="2000"
+        app:dividerCount="2"
+        app:pathStartColor="#44e36b"
+        app:pathMidColor="#dfbd20"
+        app:pathEndColor="#df5b20"/>
+
+</RelativeLayout>

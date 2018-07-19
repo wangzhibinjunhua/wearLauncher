@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/qrcode_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg">
+
+    <TextView android:id="@+id/volume_title"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/volume_title"/>
+    
+    
+    <TextView android:id="@+id/volume_done"
+        style="@style/bottom_text_style"
+        android:text="@string/done"/>
+    
+    <LinearLayout 
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@id/volume_title"
+        android:layout_above="@id/volume_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical">        
+        
+        <include 
+	        android:id="@+id/volume_multimedia"
+	        layout="@layout/view_seekbar"/>
+	    <include 
+	        android:id="@+id/volume_ring"
+	        layout="@layout/view_seekbar"/>
+	    <include 
+	        android:id="@+id/volume_alarm"
+            layout="@layout/view_seekbar"/>
+    </LinearLayout>
+</RelativeLayout>

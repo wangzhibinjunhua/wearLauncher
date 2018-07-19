@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	1	:	日间晴天
+	2	:	日间多云
+	3	:	阴天
+	4	:	雾
+	5	:	小雨
+	6	:	阵雨
+	7	:	雷阵雨
+	8	:	大雨
+	9	:	雪
+	10	:	雨雪
+	11	:	高温
+	12	:	低温
+	13	:	风
+	14	:	夜里晴天
+	15	:	夜里多云
+-->
+<drawables>
+	<image>clock_skin_weather_sunny.png</image>
+	<image>clock_skin_weather_cloudy.png</image>
+	<image>clock_skin_weather_overcast.png</image>
+	<image>clock_skin_weather_fog.png</image>
+	<image>clock_skin_weather_rain.png</image>
+	<image>clock_skin_weather_showers.png</image>
+	<image>clock_skin_weather_t_storm.png</image>
+	<image>clock_skin_weather_rainstorm.png</image>
+	<image>clock_skin_weather_snow.png</image>
+	<image>clock_skin_weather_rainsnow.png</image>
+	<image>clock_skin_weather_hot.png</image>
+	<image>clock_skin_weather_cold.png</image>
+	<image>clock_skin_weather_windy.png</image>
+	<image>clock_skin_weather_sunny_night.png</image>
+	<image>clock_skin_weather_cloudy_night.png</image>
+</drawables>

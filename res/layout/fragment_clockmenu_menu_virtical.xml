@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transport">
+    
+    <com.sczn.wearlauncher.view.menu.MenuVerticalBg
+        android:id="@+id/menu_virtical_recyleview_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:focusable="false"/>
+
+    <com.sczn.wearlauncher.view.menu.MenuVirticalRecyleView 
+        android:id="@+id/menu_virtical_recyleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"/>
+
+</FrameLayout>

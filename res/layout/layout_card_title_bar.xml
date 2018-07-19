@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/card_activity_titlebar_height"
+    android:orientation="horizontal">
+    
+    <TextView 
+        android:id="@+id/card_title_bar_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawableBottom="@drawable/diliver_title"
+        android:gravity="bottom|center_horizontal"/>
+    
+    
+    <ImageView 
+        android:id="@+id/card_title_bar_back"
+        android:layout_width="@dimen/card_activity_titlebar_height"
+        android:layout_height="@dimen/card_activity_titlebar_height"
+        android:scaleType="center"
+        android:src="@drawable/card_title_bar_back"/>
+</FrameLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sczn.wearlauncher"
+    android:versionCode="1"
+    android:versionName="1.0"
+    android:installLocation="auto" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+    
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    
+    <!-- app install -->
+    <uses-permission android:name="android.permission.INTERNET" />  
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    
+    <!-- call -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    
+    <!-- 闹钟权限 -->
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    
+    <!-- GPS权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    
+
+    <application
+        android:name=".LauncherApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme" >
+        
+        <meta-data android:name="com.amap.api.v2.apikey" 
+       		 android:value="eaaac249b1cee087d3007648273be4a2">      
+		</meta-data>
+        
+		<service android:name="com.amap.api.location.APSService"/>
+
+        <activity
+            android:name="com.sczn.wearlauncher.activity.WearLauncherActivity"
+            android:label="@string/app_name"
+            android:configChanges="locale|layoutDirection"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.MONKEY" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name=".activity.ClockSkinChooseActivity"></activity>
+        <activity
+            android:name=".activity.StyleChooseActivity">
+            <intent-filter>
+                <action android:name="com.sczn.action..StyleChooseActivity" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name=".activity.NotificationActivity">
+        </activity>
+        <activity 
+            android:name=".activity.BtConnectActivity">
+        </activity>
+        
+        <activity 
+            android:name=".activity.BtStyleChooseActivity">
+        </activity>
+        
+        <!-- card activity -->
+        <activity android:name=".activity.card.AltActivity"></activity>
+        <activity android:name=".activity.card.CompassActivity"></activity>
+        <activity android:name=".activity.card.PressureActivity"></activity>
+        <activity android:name=".activity.card.SleepActivity"></activity>
+        <activity android:name=".activity.card.StepCountActivity"></activity>
+        <activity android:name=".activity.card.HeartRateActivity"></activity>
+        
+        <!-- heatalarm -->
+        <activity
+            android:name=".card.healthalarm.ActivityHealthAlarm"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="com.sczn.action.activity.HealthAlarmActivity.sit" />
+                <action android:name="com.sczn.action.activity.HealthAlarmActivity.drink" />
+            </intent-filter>
+        </activity>
+        
+        <service 
+            android:name=".services.SosService">
+            <intent-filter >
+                <action android:name="com.sczn.action.service.SosService"/>
+            </intent-filter>
+        </service>
+        
+        <service 
+            android:name=".services.MainService"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter >
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
+        
+        <service 
+            android:name=".services.SensorService"
+            android:process="com.sczn.wearlauncher.service"
+            android:singleUser="true">
+            <intent-filter >
+                <action android:name="com.sczn.action.service.SensorService"/>
+            </intent-filter>
+        </service>
+        
+        <receiver android:name=".receivers.SosReceiver">
+            <intent-filter >
+                <action android:name="com.action.broadcast.setsos"/>
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name=".receivers.BtReceiver">
+            <intent-filter >
+                <action android:name="android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED"/>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        
+        <provider 
+            android:name="com.sczn.wearlauncher.db.provider.StepcountProvider"
+            android:authorities="com.sczn.wearlauncher.db.provider.StepcountProvider"
+            android:exported="true"></provider>
+        
+        <provider 
+            android:name="com.sczn.wearlauncher.db.provider.SleepTimeProvider"
+            android:authorities="com.sczn.wearlauncher.db.provider.SleepTimeProvider"
+            android:exported="true"></provider>
+        <provider 
+            android:name="com.sczn.wearlauncher.db.provider.HeartRateProvider"
+            android:authorities="com.sczn.wearlauncher.db.provider.HeartRateProvider"
+            android:exported="true"></provider>
+        <provider 
+            android:name="com.sczn.wearlauncher.db.provider.HealthAlarmProvider"
+            android:authorities="com.sczn.wearlauncher.db.provider.HealthAlarmProvider"
+            android:exported="true"></provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.sczn.wearlauncher.view.menu.MenuVerticalItem
+      xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/applist_item_height"
+    android:orientation="horizontal"
+    android:gravity="center_vertical|right"
+    android:paddingRight="@dimen/menu_vertical_start_gap"
+    app:is_app_item="false"
+    app:item_translation_max="@dimen/menu_vertical_icon_translation">
+
+    <com.sczn.wearlauncher.view.ScrollerTextView
+        android:id="@+id/applist_name"
+        android:layout_width="@dimen/applist_item_textwidth"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/menu_vertical_textsize"
+        android:gravity="right"
+        />
+    
+    <View 
+        android:layout_width="@dimen/menu_vertical_text_gap"
+        android:layout_height="@dimen/menu_vertical_text_gap"/>
+    
+    <ccom.sczn.wearlauncher.view.menu.MenuIconImage
+        android:id="@+id/applist_icon"
+        android:layout_width="@dimen/applist_item_height"
+        android:layout_height="@dimen/applist_item_height"/>
+
+</com.sczn.wearlauncher.view.menu.MenuVerticalItem>

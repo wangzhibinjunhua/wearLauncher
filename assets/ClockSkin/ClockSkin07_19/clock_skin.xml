@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<clockskin> 
+	<!--
+		<name>day_array.xml</name>    图片名称  可以是单张图片或者xml配置文件，一个xml文件代表里面是一个图片数组
+		<centerX>0</centerX>	 X坐标，默认屏幕中心点
+		<centerY>0</centerY>	 Y坐标，默认屏幕中心点
+		<rotate>1</rotate>		时针分针等旋转标识，具体见下方解释  roate index
+		<angle>60</angle>		跟<rotate>搭配，旋转偏差角度，如默认0度开始，现在需要从60°开始则在此配置
+		<arraytype>2</arraytype>		如果图片配置了xml，这个用来标识它具体类型，见下方的 arraytype index
+		<color>1</color>		充电图形的颜色，默认白色，需要黑色则配置1，否则可不配置
+		<mulrotate>3</mulrotate>	跟<rotate>搭配，正常旋转速度的倍数，默认为1，为正则默认旋转速度乘以配置的值，为负则除其绝对值
+		<startAngle>150</startAngle>	表盘旁边弧形文字起始角度
+		<direction>1</direction>	旋转方向，1为顺时针，2为逆时针，不配置则默认为顺时针
+		<textsize>1</textsize>	表盘旁边弧形文字字体大小，不配置则默认19
+	-->
+	<!-- 
+	rotate index :
+		hour : 1	时针旋转角度
+		minute : 2	分针旋转角度
+		second : 3	秒针旋转角度
+		month : 4	月份旋转角度
+		week : 5	星期旋转角度
+		battery : 6	电池旋转角度
+	-->
+	<!--
+	arraytype index :  数字数组默认为从最小的开始，如0——9图片则第一张配置0，1——12图片则第一张配置1
+		yearmonthday	:	1	数字型年月日，如2015-01-01，，采用11张图片，第1——10张为数字0到9，第11张为日期分割图
+		monthday : 2 	数字型月份日期  如 10-01，采用11张图片，第1——10张为数字0到9，第11张为月份日期分割图
+		month : 3	月份(采用12张图片指向12个月，1——12)
+		day : 4		日期(采用10张图片，0——9)
+		weekday	：5		星期，七张图片，周天到周一
+		hourminute : 6	数字时间  如 10:59 am	小时分钟，第1——10张配置0——9数字，第11张图片配置分割图，第12张配置AM，第13张配置PM，
+							如没有AM和PM则可不配，这个组合配置的中心点为数字的中心点，如有AMPM会自动加入到数字后方
+		hour : 7	小时，0——9图片
+		minute ：8	分钟，0——9图片
+		second : 9	秒，0——9图片
+		weather	:	10 天气，固定15张图片，图片顺序参考weather_array.xml里注释
+		temprature	：	11	温度，四张图片，第一张负号，最后一张单位，图片配置为第1-10为数字，第11张图片为负号，第12张图片为单位
+		steps ： 12 步数，五个数字，高位为空则使用特殊图片，第1——10配置0——9数字，第11张配置特殊图片
+		heartrate : 13		上次心率结果，10张图片，0——9
+		battery level ： 14 电量，三个数字，高位为空则使用特殊图片，第1——10配置0——9数字，第11张配置特殊图片
+		special second	:	15	跑动的秒针图片，走过的为一个颜色，没走过的为另一个颜色，两张图片，第一张为走过的图片，第二张为普通图片
+		pedometer text	： 97 表盘旁边画弧形文字，计步总数，可使用<startAngle>配置起始角度，<direction>配置方向，<textsize>配置文字大小
+		heartrate text	： 98 表盘旁边画弧形文字，上次心率结果，可使用<startAngle>配置起始角度，<direction>配置方向，<textsize>配置文字大小
+		charging battery ： 99 充电电池图标位置，无需配图片，只要坐标位置即可，配置文字及图片颜色使用<color>
+	-->
+	
+	<drawable>
+		<name>clock_skin_panel.png</name>
+	</drawable>	
+	<drawable>
+		<name>day_array.xml</name>
+		<centerX>-32</centerX>
+		<centerY>-65</centerY>
+		<arraytype>2</arraytype>
+	</drawable>
+	<drawable>
+		<name>weekday_array.xml</name>
+		<centerX>-85</centerX>
+		<centerY>0</centerY>
+		<arraytype>5</arraytype>
+	</drawable>	
+	<drawable>
+		<name>hour_minute_array.xml</name>
+		<centerX>0</centerX>
+		<centerY>75</centerY>
+		<arraytype>6</arraytype>
+	</drawable>	
+	<drawable>
+		<centerX>-30</centerX>
+		<centerY>110</centerY>
+		<color>0</color>
+		<arraytype>99</arraytype>
+	</drawable>
+	<drawable>
+		<name>clock_skin_minute.png</name>
+		<rotate>2</rotate>
+	</drawable>
+	<drawable>
+		<name>clock_skin_hour.png</name>
+		<rotate>1</rotate>
+	</drawable>
+</clockskin>
+

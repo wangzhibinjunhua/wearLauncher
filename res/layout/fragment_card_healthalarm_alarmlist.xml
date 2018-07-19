@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout 
+        android:id="@+id/botton_button"
+        style="@style/bottom_text_style">
+        <TextView
+	        android:id="@+id/healthalarm_add"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:gravity="center"
+	        android:drawableLeft="@drawable/healthalarm_add"
+	        android:drawablePadding="10dp"
+	        android:text="@string/alarm_add"/>
+    </LinearLayout>
+
+    
+    <FrameLayout 
+        android:layout_above="@id/botton_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <TextView 
+            android:id="@+id/healthalarm_empty"
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/alarm_none"/>
+        
+        <com.sczn.wearlauncher.view.MyRecyclerView 
+	        android:id="@+id/healthalarm_list"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:scrollbars="none"
+	        android:divider="@null"
+	        android:fastScrollEnabled="false"/>
+    </FrameLayout>
+   
+</RelativeLayout>
+    

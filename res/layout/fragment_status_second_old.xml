@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:lantin="http://schemas.android.com/apk/res/com.sczn.wearlauncher"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/transport"
+    android:orientation="vertical">
+        
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+            
+        <com.sczn.wearlauncher.view.status.BatteryIcon 
+            android:id="@+id/status_battery"
+            style="@style/style_status_icon_contain">
+                
+            <com.sczn.wearlauncher.view.LanTingTextView 
+                android:id="@+id/status_battery_status"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                lantin:style="@string/lantin_small"
+                android:text="@string/status_battery_normal"
+                android:textSize="@dimen/status_icon_battary_textsizesmall"/>
+            
+            <com.sczn.wearlauncher.view.LanTingTextView 
+                android:id="@+id/status_battery_level"
+               	android:layout_above="@id/status_battery_status"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            lantin:style="@string/lantin_middle"
+	            android:gravity="center"/>
+        </com.sczn.wearlauncher.view.status.BatteryIcon>
+
+        <LinearLayout 
+            style="@style/style_status_icon_contain"
+            android:layout_marginLeft="@dimen/status_icon_horizontal_gap">
+            <com.sczn.wearlauncher.view.status.SimIcon
+                android:id="@+id/status_sim"
+	            style="@style/style_status_icon_image"
+	            android:src="@drawable/statu_icon_sim_0"/>
+        </LinearLayout>
+
+    </LinearLayout>  
+        
+    <View 
+        android:layout_width="1dp"
+        android:layout_height="@dimen/status_icon_horizontal_gap"/>
+        
+    <LinearLayout 
+            
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+            
+        <LinearLayout 
+            style="@style/style_status_icon_contain">
+            <com.sczn.wearlauncher.view.status.DataIcon
+                android:id="@+id/status_data"
+	            style="@style/style_status_icon_image"
+	            android:src="@drawable/statu_icon_data_off"/>
+        </LinearLayout>
+            
+        <LinearLayout 
+            android:layout_marginLeft="@dimen/status_icon_horizontal_gap"
+            style="@style/style_status_icon_contain">
+             <com.sczn.wearlauncher.view.status.WifiIcon
+                 android:id="@+id/status_wifi"
+	            style="@style/style_status_icon_image"
+	            android:src="@drawable/statu_icon_wifi_off"/>
+        </LinearLayout>
+
+    </LinearLayout> 
+</LinearLayout>

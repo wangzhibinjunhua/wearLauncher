@@ -1,0 +1,82 @@
+
+<!-- 
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <com.sczn.wearlauncher.view.LanTingTextView 
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sleep_lable_height"
+                android:paddingStart="@dimen/sleep_lable_padding_start"
+                android:paddingEnd="@dimen/sleep_lable_padding_start"
+                android:textColor="@color/normal_text"
+                android:textSize="@dimen/sleep_lable_size"
+                android:gravity="center_horizontal|bottom"
+                android:text="@string/heartrate_record"/>
+    
+    <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sleep_value_height"
+            android:gravity="center_horizontal|bottom"
+            android:paddingStart="@dimen/sleep_value_padding_start"
+            android:paddingEnd="@dimen/sleep_value_padding_start">
+            
+            <com.sczn.wearlauncher.view.DINCondTextView
+                android:id="@+id/heartrate_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/heartrate_value"
+                android:textSize="@dimen/sleep_value_size_normal"/>
+            
+            <com.sczn.wearlauncher.view.DINCondTextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sleep_lable_size"
+                android:textColor="@color/heartrate_value"
+                android:text="@string/heartrate_unit"/>
+        </LinearLayout>
+
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sleep_chat_padding_top"/>
+
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sleep_chat_height">
+        
+        <TextView 
+            android:id="@+id/heartrate_none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/sleep_lable_padding_start"
+            android:layout_marginRight="@dimen/sleep_lable_padding_start"
+            android:gravity="center"
+            android:text="@string/heartrate_none"/>
+        
+        <com.sczn.wearlauncher.view.card.HeartRateChatView
+            android:id="@+id/heartrate_chat"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        app:maxValue="2"
+	        app:dividerCount="2"
+	        app:pathStartColor="#44e36b"
+	        app:pathMidColor="#dfbd20"
+	        app:pathEndColor="#df5b20"
+	        app:pathEffect="20"
+	        app:xString="@array/heartrate_x_axis"/>
+    </FrameLayout>
+    
+    <com.sczn.wearlauncher.view.LanTingTextView 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/sleep_lable_padding_start"
+                android:paddingEnd="@dimen/sleep_lable_padding_start"
+                android:textColor="@color/normal_text"
+                android:textSize="@dimen/sleep_lable_size"
+                android:gravity="center_horizontal|bottom"
+                android:text="@string/heartrate_history"/>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/health_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	  
+    <ImageView 
+        android:id="@+id/heart_rate_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/heart_1"/>
+    
+    <ImageView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/health_bg"/>
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/health_heart"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+    
+    <LinearLayout 
+        android:id="@+id/heart_rate_num_part"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:visibility="gone">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/heart_rate_current"
+            android:textColor="#666666"/>
+        
+        <com.sczn.wearlauncher.view.card.CardFragmentTextView
+        	android:id="@+id/heart_rate_text"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textColor="@color/normal_text"
+        	android:textSize="66sp"
+        	android:layout_marginTop="-15dp"/>
+    </LinearLayout>
+   
+    <TextView
+        android:id="@+id/begin_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/normal_text"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:gravity="center_horizontal"
+        android:text="@string/heart_rate_begin"/>
+        
+</RelativeLayout>

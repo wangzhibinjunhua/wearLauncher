@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.sczn.wearlauncher.view.menu.MenuMore xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/vg_cover"
+        android:layout_width="@dimen/menu_children_width"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal">
+
+        <com.sczn.wearlauncher.view.menu.MenuIconImage
+            android:id="@+id/menu_child_icon"
+            android:layout_width="@dimen/menu_children_icon_size"
+            android:layout_height="@dimen/menu_children_icon_size"/>
+
+        <com.sczn.wearlauncher.view.ScrollerTextView
+            android:id="@+id/menu_child_text"
+            android:paddingTop="@dimen/menu_children_icon_text_gap"
+            android:layout_width="@dimen/menu_children_icon_size"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/menu_vertical_textsize"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</com.sczn.wearlauncher.view.menu.MenuMore>

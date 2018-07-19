@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/compass_bg">
+
+    <ImageView
+        android:id="@+id/iv_scanning"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/compass_scanning"/>
+    <TextView
+        android:id="@+id/tv_sacnning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/compass_location_text"/>
+    <TextView 
+        android:id="@+id/tv_current_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="@string/compass_current_location_text"
+        android:visibility="gone"/>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true">
+        <TextView 
+            android:id="@+id/latitude "
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textSize="41sp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+        <TextView 
+            android:id="@+id/longitude"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textSize="41sp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+    </LinearLayout>
+    
+    <ImageView 
+        android:id="@+id/retest_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
+        android:src="@drawable/compass_position"
+        android:visibility="gone"/>
+</RelativeLayout>

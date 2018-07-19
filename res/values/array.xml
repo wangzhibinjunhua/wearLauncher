@@ -1,0 +1,143 @@
+<!--
+  ~ Copyright (C) 2012 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string-array name="sleep_x_axis">
+        <item >"21"</item>
+        <item >"23"</item>
+        <item >"01"</item>
+        <item >"03"</item>
+        <item >"05"</item>
+        <item >"07"</item>
+        <item >"09"</item>
+    </string-array>
+    <string-array name="sleep_y_axis">
+        <item >""</item>
+        <item >@string/sleep_light</item>
+        <item >@string/sleep_deep</item>
+    </string-array>
+    
+    <string-array name="heartrate_x_axis">
+        <item >@string/pick_weekday_mo</item>
+        <item >@string/pick_weekday_tu</item>
+        <item >@string/pick_weekday_we</item>
+        <item >@string/pick_weekday_th</item>
+        <item >@string/pick_weekday_fr</item>
+        <item >@string/pick_weekday_sa</item>
+        <item >@string/pick_weekday_su</item>
+    </string-array>
+    
+    <string-array name="weekday_pick">
+        <item >" "</item>
+        <item >" "</item>
+        <item >" "</item>
+        <item >" "</item>
+        <item >" "</item>
+        <item >" "</item>
+        <item >" "</item>
+    </string-array>
+    
+    <string-array name="time_pick_hour">
+        <item >"00"</item>
+        <item >"01"</item>
+        <item >"02"</item>
+        <item >"03"</item>
+        <item >"04"</item>
+        <item >"05"</item>
+        <item >"06"</item>
+        <item >"07"</item>
+        <item >"08"</item>
+        <item >"09"</item>
+        <item >"10"</item>
+        <item >"11"</item>
+        <item >"12"</item>
+        <item >"13"</item>
+        <item >"14"</item>
+        <item >"15"</item>
+        <item >"16"</item>
+        <item >"17"</item>
+        <item >"18"</item>
+        <item >"19"</item>
+        <item >"20"</item>
+        <item >"21"</item>
+        <item >"22"</item>
+        <item >"23"</item>
+    </string-array>
+    
+    <string-array name="time_pick_minuter">
+        <item >"00"</item>
+        <item >"01"</item>
+        <item >"02"</item>
+        <item >"03"</item>
+        <item >"04"</item>
+        <item >"05"</item>
+        <item >"06"</item>
+        <item >"07"</item>
+        <item >"08"</item>
+        <item >"09"</item>
+        <item >"10"</item>
+        <item >"11"</item>
+        <item >"12"</item>
+        <item >"13"</item>
+        <item >"14"</item>
+        <item >"15"</item>
+        <item >"16"</item>
+        <item >"17"</item>
+        <item >"18"</item>
+        <item >"19"</item>
+        <item >"20"</item>
+        <item >"21"</item>
+        <item >"22"</item>
+        <item >"23"</item>
+        <item >"24"</item>
+        <item >"25"</item>
+        <item >"26"</item>
+        <item >"27"</item>
+        <item >"28"</item>
+        <item >"29"</item>
+        <item >"30"</item>
+        <item >"31"</item>
+        <item >"32"</item>
+        <item >"33"</item>
+        <item >"34"</item>
+        <item >"35"</item>
+        <item >"36"</item>
+        <item >"37"</item>
+        <item >"38"</item>
+        <item >"39"</item>
+        <item >"40"</item>
+        <item >"41"</item>
+        <item >"42"</item>
+        <item >"43"</item>
+        <item >"44"</item>
+        <item >"45"</item>
+        <item >"46"</item>
+        <item >"47"</item>
+        <item >"48"</item>
+        <item >"49"</item>
+        <item >"50"</item>
+        <item >"51"</item>
+        <item >"52"</item>
+        <item >"53"</item>
+        <item >"54"</item>
+        <item >"55"</item>
+        <item >"56"</item>
+        <item >"57"</item>
+        <item >"58"</item>
+        <item >"59"</item>
+    </string-array>
+ 
+</resources>

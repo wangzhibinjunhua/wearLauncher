@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical">
+    
+    <TextView 
+            style="@style/title_style"
+            android:text="@string/style_text"/>
+    
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        
+        <com.sczn.wearlauncher.view.menu.StyleChooseViewPager
+	        android:id="@+id/style_viewpager"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_gravity="center"/>
+    
+    	<com.sczn.wearlauncher.view.ViewPagerIndicator
+            android:id="@+id/style_choose_style_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/indicator_dot_all_height"
+            android:minWidth="@dimen/indicator_dot_size_selected"
+            android:paddingRight="@dimen/indicator_vertical_paddingright"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical|right"/>
+    </FrameLayout>
+    
+
+    <TextView 
+            android:id="@+id/style_choose_skin_text"
+            style="@style/bottom_text_style"
+            android:text="@string/skin_change"/>
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <LinearLayout 
+        android:id="@+id/drink_button"
+        android:layout_alignParentBottom="true"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        
+        <TextView 
+	        android:id="@+id/drink_much"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:text="@string/drink_much"
+	        android:drawableTop="@drawable/drink_much"/>
+        <TextView 
+	        android:id="@+id/drink_little"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:text="@string/drink_little"
+	        android:drawableTop="@drawable/drink_little"/>
+        <TextView 
+	        android:id="@+id/drink_setting"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:text="@string/healthalarm_setting"
+	        android:drawableTop="@drawable/healthalarm_setting"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_above="@id/drink_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingStart="50dp"
+	        android:paddingEnd="20dp"
+	        android:scaleType="fitStart"
+	        android:src="@drawable/drink_icon"/>
+        <LinearLayout 
+            android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:orientation="vertical"
+	        android:gravity="center_vertical">
+            <com.sczn.wearlauncher.view.ScrollerTextView 
+                android:id="@+id/drink_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.sczn.wearlauncher.view.ScrollerTextView 
+                android:id="@+id/drink_target"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+
+</RelativeLayout>

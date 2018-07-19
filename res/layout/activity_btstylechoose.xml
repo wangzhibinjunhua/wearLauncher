@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tools_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:clipChildren="false">
+
+    <com.sczn.wearlauncher.view.ScrollerTextView
+        android:id="@+id/bt_style_choose_title"
+        style="@style/title_style"
+        android:text="@string/control_text"/>
+    
+    <View 
+        android:id="@+id/bt_style_choose_space"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/title_height"
+	    android:visibility="invisible"/>
+    
+    <LinearLayout 
+        android:baselineAligned="false"
+        android:layout_below="@id/bt_style_choose_title"
+        android:layout_above="@id/bt_style_choose_space"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+	        android:orientation="vertical"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:gravity="center_horizontal|bottom">
+	
+	        <com.sczn.wearlauncher.view.menu.MenuIconImage
+	            android:id="@+id/bt_style_choose_android"
+	            android:layout_width="@dimen/menu_children_icon_size"
+	            android:layout_height="@dimen/menu_children_icon_size"
+	            android:src="@drawable/icon_android"/>
+	
+	        <com.sczn.wearlauncher.view.ScrollerTextView
+	            android:paddingTop="@dimen/menu_children_icon_text_gap"
+	            android:layout_width="@dimen/menu_children_icon_size"
+	            android:layout_height="wrap_content"
+	            android:text="@string/bt_style_choose_android"
+	            android:textSize="@dimen/menu_vertical_textsize"
+	            android:gravity="center"/>
+	    </LinearLayout>
+	    <LinearLayout
+	        android:orientation="vertical"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:gravity="center_horizontal|bottom">
+	
+	        <com.sczn.wearlauncher.view.menu.MenuIconImage 
+	            android:id="@+id/bt_style_choose_ios"
+	            android:layout_width="@dimen/menu_children_icon_size"
+	            android:layout_height="@dimen/menu_children_icon_size"
+	             android:src="@drawable/icon_apple"/>
+	
+	        <com.sczn.wearlauncher.view.ScrollerTextView
+	            android:paddingTop="@dimen/menu_children_icon_text_gap"
+	            android:layout_width="@dimen/menu_children_icon_size"
+	            android:layout_height="wrap_content"
+	            android:text="@string/bt_style_choose_ios"
+	            android:textSize="@dimen/menu_vertical_textsize"
+	            android:gravity="center"/>
+	    </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

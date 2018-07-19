@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	public static final int MENU_TYPE_NORMAL = 0;
+	public static final int MENU_TYPE_FOLDER = 1;
+	public static final int MENU_TYPE_BTREMOTE = 2;
+	public static final int MENU_TYPE_MORE= 3;
+	
+	public static final int MENU_TYPE_ANDROID_ASSIST= 4;
+	public static final int MENU_TYPE_IOS_ASSIST = 5;
+	
+	<menu
+        wearlauncher:Type="3"
+        wearlauncher:CustomName="@string/menu_more"
+        wearlauncher:CustomIconName="more.png"/>
+ -->
+<menulist xmlns:wearlauncher="http://schemas.android.com/apk/res/com.sczn.wearlauncher">
+    
+    <menu 
+        wearlauncher:Type="2"
+        wearlauncher:CustomIconName="remotecontrol.png"
+        wearlauncher:CustomName="@string/control_text">
+        <children
+            wearlauncher:Intent="com.sczn.bluetoothwat.RemoteMusicActivity"
+        	wearlauncher:CustomIconName="com.example.bluetoothwat.RemoteMusicActivity.png"/>
+        <children
+            wearlauncher:Intent="com.sczn.bluetoothwat.WatchFindPhoneActivity"
+        	wearlauncher:CustomIconName="com.example.bluetoothwat.WatchFindPhoneActivity.png"/>
+        <children
+            wearlauncher:Intent="com.sczn.bluetoothwat.WatchLockPhoneActivity"
+        	wearlauncher:CustomIconName="com.example.bluetoothwat.WatchLockPhoneActivity.png"/>
+        <children
+            wearlauncher:Intent="com.sczn.bluetoothwat.WatchRemoteCameraActivity"
+        	wearlauncher:CustomIconName="com.example.bluetoothwat.WatchRemoteCameraActivity.png"/>
+        <children
+            wearlauncher:Intent="com.sczn.bluetoothwat.WatchBluetoothControl"
+        	wearlauncher:CustomIconName="com.example.bluetoothwat.WatchBluetoothControl.png"/>
+        <children
+            wearlauncher:Intent="com.sczn.bluetoothwat.QRcodeAcitivity"
+        	wearlauncher:CustomIconName="com.example.bluetoothwat.QRcodeAcitivity.png"/>
+        <children
+            wearlauncher:Intent="com.sczn.bluetoothwat.WatchAncsActivity"
+        	wearlauncher:CustomIconName="com.example.bluetoothwat.WatchAncsActivity.png"/>
+    </menu>
+    
+    <!-- 
+    <children
+            wearlauncher:Intent="com.android.deskclock.stopwatch.StopwatchActivity"
+        	wearlauncher:CustomIconName="com.android.deskclock.stopwatch.StopwatchActivity.png"/>
+     -->
+    
+    <menu 
+        wearlauncher:Type="1"
+        wearlauncher:CustomIconName="clocks.png"
+        wearlauncher:CustomName="@string/clock_text">
+        <children
+            wearlauncher:Intent="com.android.deskclock.SlidingAlarmClock"
+        	wearlauncher:CustomIconName="com.android.deskclock.AlarmClockActivity.png"/>
+
+        <children
+            wearlauncher:Intent="com.android.deskclock.DeskClock"
+        	wearlauncher:CustomIconName="com.android.deskclock.timer.TimerActivity.png"/>
+    </menu>
+    
+    <menu
+        wearlauncher:Intent="com.android.settings.Settings"
+        wearlauncher:CustomIconName="com.android.settings.Settings.png"/>
+    
+    <menu 
+        wearlauncher:Type="1"
+        wearlauncher:CustomIconName="correspond.png"
+        wearlauncher:CustomName="@string/correspond_text">
+        <children
+            wearlauncher:Intent="com.android.contacts.activities.PeopleActivity"
+        	wearlauncher:CustomIconName="com.android.contacts.activities.PeopleActivity.png"/>
+        <children
+            wearlauncher:Intent="com.android.mms.ui.BootActivity"
+        	wearlauncher:CustomIconName="com.android.mms.ui.BootActivity.png"/>
+        <children
+            wearlauncher:Intent="com.android.dialer.DialtactsActivity"
+        	wearlauncher:CustomIconName="com.android.dialer.DialtactsActivity.png"/>
+    </menu>
+    
+    <menu
+        wearlauncher:Intent="com.android.browser.BrowserActivity"
+        wearlauncher:CustomIconName="com.android.browser.BrowserActivity.png"/>
+    
+    <menu 
+        wearlauncher:Type="1"
+        wearlauncher:CustomIconName="tools.png"
+        wearlauncher:CustomName="@string/tools_text">
+        <children
+            wearlauncher:Intent="com.android.calculator2.Calculator"
+        	wearlauncher:CustomIconName="com.android.calculator2.Calculator.png"/>
+        <children
+            wearlauncher:Intent="com.android.calendar.AllInOneActivity"
+        	wearlauncher:CustomIconName="com.easier.ui.CalendarView.png"/>
+    </menu>
+
+    <menu
+        wearlauncher:Intent="com.android.camera.CameraLauncher"
+        wearlauncher:CustomIconName="com.android.camera.CameraLauncher.png"/>
+    <menu
+        wearlauncher:Intent="com.sczn.action..StyleChooseActivity"
+        wearlauncher:Type="1"
+        wearlauncher:CustomName="@string/style_text"
+        wearlauncher:CustomIconName="style.png"/>
+    
+    <menu 
+        wearlauncher:Type="1"
+        wearlauncher:CustomIconName="watchmanager.png"
+        wearlauncher:CustomName="@string/watch_manage_text">
+        <children
+            wearlauncher:Intent="com.android.providers.downloads.ui.DownloadList"
+        	wearlauncher:CustomIconName="com.android.providers.downloads.ui.DownloadList.png"/>
+        <children
+            wearlauncher:Intent="com.mediatek.filemanager.FileManagerOperationActivity"
+        	wearlauncher:CustomIconName="com.mediatek.filemanager.FileManagerOperationActivity.png"/>
+    </menu>
+    <menu 
+        wearlauncher:Type="1"
+        wearlauncher:CustomIconName="videocenter.png"
+        wearlauncher:CustomName="@string/video_text">
+        <children
+            wearlauncher:Intent="com.android.soundrecorder.SoundRecorder"
+        	wearlauncher:CustomIconName="com.android.soundrecorder.SoundRecorder.png"/>
+        <children
+            wearlauncher:Intent="com.android.music.MusicBrowserActivity"
+        	wearlauncher:CustomIconName="com.android.music.MusicBrowserActivity.png"/>
+    </menu>
+    <menu 
+        wearlauncher:Type="1"
+        wearlauncher:CustomIconName="multimedia.png"
+        wearlauncher:CustomName="@string/multimedia_center_text">
+        <children
+            wearlauncher:Intent="com.android.gallery3d.app.GalleryActivity"
+        	wearlauncher:CustomIconName="com.android.gallery3d.app.GalleryActivity.png"/>
+        <children
+            wearlauncher:Intent="com.mediatek.videoplayer.MovieListActivity"
+        	wearlauncher:CustomIconName="com.mediatek.videoplayer.MovieListActivity.png"/>
+    </menu>
+	
+	<menu
+        wearlauncher:Intent="com.google.android.maps.MapsActivity"
+        wearlauncher:CustomIconName="com.google.android.maps.MapsActivity.png"/>
+		
+	<menu
+        wearlauncher:Intent="com.google.android.googlequicksearchbox.VoiceSearchActivity"
+        wearlauncher:CustomIconName="com.google.android.googlequicksearchbox.VoiceSearchActivity.png"/>
+	
+	<menu
+        wearlauncher:Intent="com.android.vending.AssetBrowserActivity"
+        wearlauncher:CustomIconName="com.android.vending.AssetBrowserActivity.png"/>
+		
+    <menu 
+        wearlauncher:Type="4"
+        wearlauncher:CustomIconName="assist_android.png"
+        wearlauncher:CustomName="@string/assist_android">
+        <children
+            wearlauncher:Intent="com.sczn.bluetoothwat.RemoteMusicActivity"
+        	wearlauncher:CustomIconName="com.example.bluetoothwat.RemoteMusicActivity.png"/>
+        <children
+            wearlauncher:Intent="com.sczn.bluetoothwat.WatchFindPhoneActivity"
+        	wearlauncher:CustomIconName="com.example.bluetoothwat.WatchFindPhoneActivity.png"/>
+        <children
+            wearlauncher:Intent="com.sczn.bluetoothwat.WatchLockPhoneActivity"
+        	wearlauncher:CustomIconName="com.example.bluetoothwat.WatchLockPhoneActivity.png"/>
+        <children
+            wearlauncher:Intent="com.sczn.bluetoothwat.WatchRemoteCameraActivity"
+        	wearlauncher:CustomIconName="com.example.bluetoothwat.WatchRemoteCameraActivity.png"/>
+        <children
+            wearlauncher:Intent="com.sczn.bluetoothwat.WatchBluetoothControl"
+        	wearlauncher:CustomIconName="com.example.bluetoothwat.WatchBluetoothControl.png"/>
+        <children
+            wearlauncher:Intent="com.sczn.bluetoothwat.QRcodeAcitivity"
+        	wearlauncher:CustomIconName="com.example.bluetoothwat.QRcodeAcitivity.png"/>
+    </menu>
+    
+    <!-- 
+    <menu 
+        wearlauncher:Type="5"
+        wearlauncher:CustomIconName="assist_apple.png"
+        wearlauncher:CustomName="@string/assist_ios">
+        <children
+            wearlauncher:Intent="com.sczn.bluetoothwat.WatchFindPhoneActivity"
+        	wearlauncher:CustomIconName="com.example.bluetoothwat.WatchFindPhoneActivity.png"/>
+        <children
+            wearlauncher:Intent="com.sczn.bluetoothwat.WatchRemoteCameraActivity"
+        	wearlauncher:CustomIconName="com.example.bluetoothwat.WatchRemoteCameraActivity.png"/>
+        <children
+            wearlauncher:Intent="com.sczn.bluetoothwat.WatchBluetoothControl"
+        	wearlauncher:CustomIconName="com.example.bluetoothwat.WatchBluetoothControl.png"/>
+        <children
+            wearlauncher:Intent="com.sczn.bluetoothwat.WatchAncsActivity"
+        	wearlauncher:CustomIconName="com.example.bluetoothwat.WatchAncsActivity.png"/>
+    </menu>
+     -->
+</menulist>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tools_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:clipChildren="false">
+
+    <com.sczn.wearlauncher.view.ScrollerTextView
+        android:id="@+id/menu_children_more_title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        style="@style/title_style"/>
+    
+    <!-- android:minHeight="@dimen/title_height" -->
+    <com.sczn.wearlauncher.view.ViewPagerIndicator 
+	    android:id="@+id/menu_child_page_ind"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    android:layout_width="@dimen/indicator_dot_all_width"
+	    android:layout_height="wrap_content"
+	    android:minHeight="@dimen/title_height"/>
+
+    <!-- 
+    android:layout_below="@id/menu_children_more_title"
+        android:layout_above="@id/menu_child_page_ind"
+         -->
+     <LinearLayout 
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_below="@id/menu_children_more_title"
+         android:layout_alignParentBottom="true"
+         android:layout_marginBottom="@dimen/menu_children_more_margin_bottom"
+         android:gravity="bottom">
+         
+         <com.sczn.wearlauncher.view.MultiViewPager
+	        xmlns:app="http://schemas.android.com/apk/res-auto"
+	        android:id="@+id/menu_children_more"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        app:matchChildWidth="@+id/vg_cover" />
+     </LinearLayout>
+</RelativeLayout>

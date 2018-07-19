@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_notification_height"
+    android:paddingLeft="@dimen/item_notification_padding"
+    android:paddingRight="@dimen/item_notification_padding"
+    android:orientation="vertical">
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:gravity="center_vertical">
+        
+        <ImageView 
+            android:id="@+id/notification_main_icon"
+            android:layout_alignParentLeft="true"
+            android:layout_width="@dimen/item_notification_icon_size"
+            android:layout_height="@dimen/item_notification_icon_size"
+            android:scaleType="centerInside"/>
+        
+        <TextView 
+            android:id="@+id/notification_main_time"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+        <com.sczn.wearlauncher.view.ScrollerTextView 
+            android:id="@+id/notification_main_app"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_toRightOf="@id/notification_main_icon"
+            android:layout_toLeftOf="@id/notification_main_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    
+    <com.sczn.wearlauncher.view.ScrollerTextView 
+        android:id="@+id/notification_main_message"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:singleLine="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"
+		android:focusable="true"
+        android:gravity="center_vertical"/>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/item_notification_diliver"/>
+
+</LinearLayout>

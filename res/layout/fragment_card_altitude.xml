@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/altitude_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/alt_bg">
+	  
+	<LinearLayout 
+	    android:id="@+id/alt_part"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="100dp"
+	    android:layout_centerHorizontal="true"
+	    android:orientation="horizontal"
+	    android:gravity="center_horizontal">
+	    
+	    <com.sczn.wearlauncher.view.card.CardFragmentTextView
+	        android:id="@+id/alt_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="78sp"
+	        android:textColor="@color/normal_text"/>
+	    <com.sczn.wearlauncher.view.card.CardFragmentTextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:textSize="39sp"
+	        android:textColor="@color/normal_text"
+	        android:text="@string/alt_unit"/>
+	</LinearLayout>
+	
+	<com.sczn.wearlauncher.view.card.CardFragmentTextView
+        android:id="@+id/bad_signal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:text="@string/pressure_bad_signal"
+        android:layout_centerInParent="true"
+       />
+
+	<ProgressBar
+	    android:id="@+id/progressBar1"
+	    style="?android:attr/progressBarStyleLarge"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerInParent="true"
+	  />
+
+</RelativeLayout>

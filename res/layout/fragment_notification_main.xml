@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <com.sczn.wearlauncher.view.ScrollerTextView
+        android:id="@+id/notification_title"
+        style="@style/title_style"
+        android:text="@string/title_notification"/>
+    
+    <TextView
+        android:id="@+id/notification_clear"
+        style="@style/bottom_text_style"
+        android:text="@string/notification_clear"/>
+    
+    <FrameLayout 
+        android:layout_below="@id/notification_title"
+        android:layout_above="@id/notification_clear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <TextView 
+            android:id="@+id/notification_empty"
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/notification_none"/>
+
+        <com.sczn.wearlauncher.view.MyRecyclerView 
+	        android:id="@+id/notification_main_list"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"/>
+    </FrameLayout>
+
+</RelativeLayout>

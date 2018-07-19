@@ -1,0 +1,104 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+        <item name="android:windowBackground">@drawable/main_bg</item>
+    </style>
+    
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_open_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_open_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_close_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_close_exit</item>
+        <item name="android:fragmentOpenEnterAnimation">@anim/activity_open_enter</item>
+        <item name="android:fragmentOpenExitAnimation">@anim/activity_open_exit</item>
+        <item name="android:fragmentCloseEnterAnimation">@anim/activity_close_enter</item>
+        <item name="android:fragmentCloseExitAnimation">@anim/activity_close_exit</item>
+        <item name="android:windowEnterAnimation">@anim/activity_open_enter</item>  
+	    <item name="android:windowExitAnimation">@anim/activity_close_enter</item> 
+	    <item name="android:windowBackground">@android:color/white</item> 
+	    <item name="android:backgroundDimEnabled">false</item><!--activity不变暗-->
+	    <item name="android:background">@android:color/transparent</item> 
+    </style>
+    
+    
+    <style name="style_text">
+        <item name="android:textColor">@color/normal_text</item>
+    </style>
+    <style name="style_text_small" parent="@style/style_text">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+    <style name="style_text_medium" parent="@style/style_text">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+    <style name="style_text_large" parent="@style/style_text">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+    
+    
+    <!-- status icon -->
+    <style name="style_status_icon_contain">
+        <item name="android:layout_width">@dimen/status_icon_width</item>
+        <item name="android:layout_height">@dimen/status_icon_height</item>
+        <item name="android:gravity">center</item>
+    </style>
+    
+    <style name="style_status_icon_image">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    
+    <!-- <item name="android:indeterminateDrawable">@drawable/seekbar_bg</item> -->
+    <style name="style_wearlauncher_seekbar" parent="@android:style/Widget.SeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/seekbar_bg</item>
+        
+        <item name="android:thumb">@drawable/seekbar_thumb</item>
+        <item name="android:thumbOffset">@dimen/seek_bar_thumb_offset</item>
+        <item name="android:focusable">true</item>
+        <item name="android:mirrorForRtl">true</item>
+    </style>
+    
+    <style name="dialogAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_push_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_push_out</item>
+    </style>
+   
+    <style name="title_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/title_height</item>
+        <item name="android:paddingLeft">@dimen/title_padding</item>
+        <item name="android:paddingRight">@dimen/title_padding</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textColor">@color/title_text</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:gravity">center_horizontal|bottom</item>
+        <item name="android:drawablePadding">@dimen/title_padding_drawable</item>
+        <item name="android:drawableBottom">@drawable/diliver_title</item>
+    </style>
+    
+    <style name="bottom_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/title_height</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:textColor">@color/title_text</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/button_bottom_single_bg</item>
+    </style>
+    
+    <!-- healthalarm -->
+    <style name="pick_weekday_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding"> 2dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/alarm_pick_weekday_bg</item>
+    </style>
+</resources>

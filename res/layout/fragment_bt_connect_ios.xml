@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/altitude_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	  
+    <com.sczn.wearlauncher.view.ScrollerTextView 
+        android:id="@+id/bt_connect_ios_title"
+        style="@style/title_style"
+        android:text="@string/bt_connecet_ios"/>
+    
+	<TextView 
+	    android:id="@+id/bt_connect_ios_adv"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    android:gravity="center"
+	    android:layout_marginBottom="@dimen/bt_connect_button_padding_bottom"
+	    android:layout_marginTop="@dimen/bt_connect_text_gap"
+        android:layout_marginLeft="@dimen/bt_connect_guide_padding_left"
+        android:layout_marginRight="@dimen/bt_connect_guide_padding_left"
+	    style="@style/style_text_medium"
+	    android:text="@string/bt_connecet_ios_adv"
+	    android:background="@drawable/bt_connect_button_adv"/>
+    
+	<ScrollView 
+        android:layout_below="@id/bt_connect_ios_title"
+        android:layout_above="@id/bt_connect_ios_adv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/bt_connect_text_gap"
+        android:layout_marginBottom="@dimen/bt_connect_text_gap"
+        android:layout_marginLeft="@dimen/bt_connect_guide_padding_left"
+        android:layout_marginRight="@dimen/bt_connect_guide_padding_left"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+        
+        <TextView 
+	        android:id="@+id/bt_connect_ios_guide"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        style="@style/style_text_medium"
+	        android:textSize="@dimen/bt_connect_normal_text"/>
+    </ScrollView>
+</RelativeLayout>

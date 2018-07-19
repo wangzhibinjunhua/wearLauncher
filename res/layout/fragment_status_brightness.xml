@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/qrcode_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg">
+
+    <TextView android:id="@+id/brightness_auto"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:gravity="center"
+        android:text="@string/brightness_auto"/>
+    
+    
+    <TextView android:id="@+id/brightness_done"
+        style="@style/bottom_text_style"
+        android:text="@string/done"/>
+    
+    <RelativeLayout 
+        android:layout_below="@id/brightness_auto"
+        android:layout_above="@id/brightness_done"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        
+        <include 
+            android:id="@+id/brightness_seekbar"
+            layout="@layout/view_seekbar"/>
+        
+    </RelativeLayout>
+
+</RelativeLayout>

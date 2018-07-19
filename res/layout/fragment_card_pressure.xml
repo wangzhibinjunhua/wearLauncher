@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pressure_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pressure_bar" >
+
+    <com.sczn.wearlauncher.view.card.CompassView
+        android:id="@+id/pressure_point"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/pressure_compass_point" />
+
+    <LinearLayout
+        android:id="@+id/pressure_part"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <com.sczn.wearlauncher.view.card.CardFragmentTextView
+            android:id="@+id/pressure_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/normal_text"
+            android:textSize="58sp" />
+
+        <com.sczn.wearlauncher.view.card.CardFragmentTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:text="@string/pressure_unit"
+            android:textColor="@color/normal_text"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/temp_part"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/test_icon" />
+
+        <com.sczn.wearlauncher.view.card.CardFragmentTextView
+            android:id="@+id/temp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:textColor="@color/normal_text"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <com.sczn.wearlauncher.view.card.CardFragmentTextView
+        android:id="@+id/bad_signal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/pressure_bad_signal"
+        android:textSize="21sp"
+        android:visibility="gone"
+        android:textStyle="bold"
+         />
+    
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+         />
+
+</RelativeLayout>

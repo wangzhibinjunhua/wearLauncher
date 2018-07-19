@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources >
+    <item type="id" name="view_root"></item>
+    <item type="id" name="view_ground"></item>
+    <item type="id" name="view_float"></item>
+    
+    <item type="id" name="tag_more_menu_position"></item>
+    
+</resources>
