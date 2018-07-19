@@ -30,13 +30,13 @@ public class CardContainFragment extends absViewPagerFragment implements IHoriza
 	private static int AUTO_ADD = 0;
 	public static final int ITEM_INDEX_LAST_TMP = ITEM_INDEX_START + AUTO_ADD++;
 	
-	public static final int ITEM_INDEX_HEALTH = ITEM_INDEX_START + AUTO_ADD++;
+	//public static final int ITEM_INDEX_HEALTH = ITEM_INDEX_START + AUTO_ADD++;
 	public static final int ITEM_INDEX_SLEEP = ITEM_INDEX_START + AUTO_ADD++;
 	public static final int ITEM_INDEX_HEALTHALARM = ITEM_INDEX_START + AUTO_ADD++; 
 	public static final int ITEM_INDEX_STEP = ITEM_INDEX_START + AUTO_ADD++;
-	public static final int ITEM_INDEX_WEATHER = ITEM_INDEX_START + AUTO_ADD++;
-	public static final int ITEM_INDEX_GEOGRAPHIC = ITEM_INDEX_START + AUTO_ADD++;
-	public static final int ITEM_INDEX_COMPASS = ITEM_INDEX_START + AUTO_ADD++;
+	//public static final int ITEM_INDEX_WEATHER = ITEM_INDEX_START + AUTO_ADD++;
+	//public static final int ITEM_INDEX_GEOGRAPHIC = ITEM_INDEX_START + AUTO_ADD++;
+	//public static final int ITEM_INDEX_COMPASS = ITEM_INDEX_START + AUTO_ADD++;
 	
 	public static final int ITEM_INDEX_FIRST_TMP = ITEM_INDEX_START + AUTO_ADD++;
 	public static final int ITEM_COUNT = ITEM_INDEX_START + AUTO_ADD;
@@ -88,24 +88,25 @@ public class CardContainFragment extends absViewPagerFragment implements IHoriza
 
 		mFragmentList.add(ITEM_INDEX_LAST_TMP, getmLastFragmentTmp());
 		
-		mFragmentList.add(ITEM_INDEX_HEALTH, getmHealthFragment());
+		//mFragmentList.add(ITEM_INDEX_HEALTH, getmHealthFragment());
 		mFragmentList.add(ITEM_INDEX_SLEEP, getmSleepFragment());
 		mFragmentList.add(ITEM_INDEX_HEALTHALARM, getmHealthAlamFragment());
 		mFragmentList.add(ITEM_INDEX_STEP, getmStepFragment());
-		mFragmentList.add(ITEM_INDEX_WEATHER, getmWeatherFragment());
-		mFragmentList.add(ITEM_INDEX_GEOGRAPHIC, getmGeographicFragment());
-		mFragmentList.add(ITEM_INDEX_COMPASS, getmCompassFragment());
+		//mFragmentList.add(ITEM_INDEX_WEATHER, getmWeatherFragment()); //del by wzb 
+		//mFragmentList.add(ITEM_INDEX_GEOGRAPHIC, getmGeographicFragment());//del by wzb 
+		//mFragmentList.add(ITEM_INDEX_COMPASS, getmCompassFragment());//del by wzb
 		
 		mFragmentList.add(ITEM_INDEX_FIRST_TMP, getmFirstFramentTmp());
 	}
 	
+	/*
 	public HealthFragment getmHealthFragment() {
 		mHealthFragment = (HealthFragment) findFragmentByIndex(ITEM_INDEX_HEALTH);
 		if(mHealthFragment == null){
 			mHealthFragment = new HealthFragment();
 		}
 		return mHealthFragment;
-	}
+	}*/
 	
 	public SleepFragment getmSleepFragment() {
 		mSleepFragment = (SleepFragment) findFragmentByIndex(ITEM_INDEX_SLEEP);
@@ -114,6 +115,7 @@ public class CardContainFragment extends absViewPagerFragment implements IHoriza
 		}
 		return mSleepFragment;
 	}
+	
 	
 	public HealthAlamFragment getmHealthAlamFragment() {
 		mHealthAlamFragment = (HealthAlamFragment) findFragmentByIndex(ITEM_INDEX_HEALTHALARM);
@@ -130,7 +132,7 @@ public class CardContainFragment extends absViewPagerFragment implements IHoriza
 		}
 		return mStepFragment;
 	}
-	
+	/*
 	public WeatherFragment getmWeatherFragment() {
 		mWeatherFragment = (WeatherFragment) findFragmentByIndex(ITEM_INDEX_WEATHER);
 		if(mWeatherFragment == null){
@@ -153,20 +155,20 @@ public class CardContainFragment extends absViewPagerFragment implements IHoriza
 			mCompassFragment = CompassFragment.newInstance(false);
 		}
 		return mCompassFragment;
-	}
+	}*///del by wzb
 
 	public absFragment getmLastFragmentTmp() {
-		mLastFragmentTmp = (CompassFragment) findFragmentByIndex(ITEM_INDEX_LAST_TMP);
+		mLastFragmentTmp = (StepFragment) findFragmentByIndex(ITEM_INDEX_LAST_TMP);
 		if(mLastFragmentTmp == null){
-			mLastFragmentTmp = CompassFragment.newInstance(true);
+			mLastFragmentTmp = new StepFragment();
 		}
 		return mLastFragmentTmp;
 	}
 
 	public absFragment getmFirstFramentTmp() {
-		mFirstFramentTmp = (HealthFragment) findFragmentByIndex(ITEM_INDEX_FIRST_TMP);
+		mFirstFramentTmp = (SleepFragment) findFragmentByIndex(ITEM_INDEX_FIRST_TMP);
 		if(mFirstFramentTmp == null){
-			mFirstFramentTmp = HealthFragment.newInstance(true);
+			mFirstFramentTmp = new SleepFragment();
 		}
 		return mFirstFramentTmp;
 	}
