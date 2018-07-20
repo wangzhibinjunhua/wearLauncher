@@ -7,7 +7,11 @@ import com.sczn.wearlauncher.fragment.absDialogFragment;
 import com.sczn.wearlauncher.util.MxyLog;
 import com.sczn.wearlauncher.util.MxyToast;
 
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
@@ -18,11 +22,12 @@ public class FragmentAlarmEdit extends absDialogFragment implements OnClickListe
 	public static final String ARG_ALARM_TYPE = "alarm_type";
 	
 	private DBUtil mDbUtil;
-	
+ 	private ProgressDialog progressDialog;
 	public static FragmentAlarmEdit newInstance(int alarmType, ModelAlarm alarm){
 		final FragmentAlarmEdit fragment = new FragmentAlarmEdit();
 		final Bundle bdl = new Bundle();
 		bdl.putParcelable(ARG_ALARM, alarm);
+		bdl.putInt(ARG_ALARM_TYPE, alarmType);//wbin add
 		fragment.setArguments(bdl);
 		return fragment;
 	}
@@ -32,7 +37,7 @@ public class FragmentAlarmEdit extends absDialogFragment implements OnClickListe
 	private TextView mCancle;
 	private ModelAlarm mAlarm;
 	private int alarmType;
-	
+	private  Context mContext;
 	private boolean isAdd = true;
 	
 	@Override
@@ -50,6 +55,7 @@ public class FragmentAlarmEdit extends absDialogFragment implements OnClickListe
 			alarmType = bdl.getInt(ARG_ALARM_TYPE, ModelAlarm.ALARM_TYPE_DRINK);
 		}
 		mDbUtil = new DBUtil(LauncherApp.appContext);
+		mContext=getActivity();
 	}
 	
 	@Override
@@ -85,14 +91,21 @@ public class FragmentAlarmEdit extends absDialogFragment implements OnClickListe
 	@Override
 	protected void destorytView() {
 		// TODO Auto-generated method stub
-
 	}
-	
+
+	@Override
+	public void onAttach(Activity activity) {
+		// TODO Auto-generated method stub
+		super.onAttach(activity);
+		this.mContext = activity;
+	}
 	private void alarmSave(){
+		MxyLog.e("mxy", "alarmSave "+isAdd);
 		if(isAdd){
 			if(-1 == mDbUtil.insertAlarm(mTimePicker.getTimeInMill(), alarmType, mViewWeekdayPick.getValue(), true)){
 				MxyToast.showShort(getActivity(), R.string.alarm_sava_failed);
 			}else{
+				UtilHealthAlarm.getInstance().InitAlarmIntent();
 				MxyToast.showShort(getActivity(), R.string.alarm_sava_success);
 			}
 		}else{
@@ -100,6 +113,7 @@ public class FragmentAlarmEdit extends absDialogFragment implements OnClickListe
 					mViewWeekdayPick.getValue(), mAlarm.isEnable())){
 				MxyToast.showShort(getActivity(), R.string.alarm_sava_failed);
 			}else{
+				UtilHealthAlarm.getInstance().InitAlarmIntent();
 				MxyToast.showShort(getActivity(), R.string.alarm_sava_success);
 			}
 		}
@@ -111,6 +125,9 @@ public class FragmentAlarmEdit extends absDialogFragment implements OnClickListe
 		switch (v.getId()) {
 			case R.id.alarm_edit_sure:
 				alarmSave();
+				Log.e("mxy","alarm edit mContext "+mContext);
+				//UtilHealthAlarm.getInstance().showProgressDialog(getString(R.string.progress_title),getString(R.string.progress_message),mContext);
+				dismissAllowingStateLoss();
 				break;
 			case R.id.alarm_edit_cancle:
 				dismissAllowingStateLoss();

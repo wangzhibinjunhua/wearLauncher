@@ -105,6 +105,12 @@
             </intent-filter>
         </activity>
         
+        <activity android:name=".activity.card.AlarmReceiveActivity">
+           <intent-filter>
+            	<action android:name="android.intent.action.MAIN"/>
+	        </intent-filter>
+        </activity> 
+        
         <service 
             android:name=".services.SosService">
             <intent-filter >

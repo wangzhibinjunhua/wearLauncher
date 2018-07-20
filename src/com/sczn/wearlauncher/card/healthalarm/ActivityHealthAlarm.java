@@ -87,6 +87,8 @@ public class ActivityHealthAlarm extends CardActivity implements OnClickListener
 				mTitle.setText(R.string.healthalarm_drink);
 				return getDrinkFragment();
 			case FRAGMENT_SIT:
+				mTitle.setText(R.string.healthalarm_sit);
+				return getSitFragment();
 			default:
 				mTitle.setText(R.string.healthalarm_sit);
 				return getSitFragment();

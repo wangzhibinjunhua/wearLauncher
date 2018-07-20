@@ -7,6 +7,7 @@ import com.sczn.wearlauncher.model.PhoneMessage;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
+import android.util.Log;
 
 public class ModelAlarm implements Parcelable{
 	
@@ -64,14 +65,40 @@ public class ModelAlarm implements Parcelable{
 		if(!enable){
 			return false;
 		}
-		if(timeInDay <= currTime){
+		if((timeInDay <= currTime)){
 			return false;
 		}
-		if((repeatDay & REPEAT_FLAG_ENABLE) == 0){
+		/*if((repeatDay & REPEAT_FLAG_ENABLE) == 0){
+			return true;
+		}*/
+		int flag = 1<<dayFlag;
+		if(repeatDay==0)
+			{
+				return true;
+			}
+		else
+			{
+				return (repeatDay & flag) != 0;
+			}
+	}
+	
+	public boolean isRepeat(long currTime, int dayFlag){
+		Log.e("mxy","isRepeat timeInDay " +timeInDay+"currTime " +currTime);
+		Log.e("mxy","isRepeat dayFlag " +dayFlag);
+		if(!enable){
+			return false;
+		}
+		if((repeatDay== 0)&&(timeInDay <= currTime)){
+			return false;
+		}
+		int flag = 1<<dayFlag;
+		if(repeatDay == 0){
+			return false;
+		}
+		else
+		{
 			return true;
 		}
-		
-		return (repeatDay & dayFlag) != 0;
 	}
 	@Override
 	public int describeContents() {
