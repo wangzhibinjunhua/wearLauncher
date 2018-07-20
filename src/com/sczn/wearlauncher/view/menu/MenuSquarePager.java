@@ -22,7 +22,7 @@ import android.widget.TextView;
 public class MenuSquarePager extends ViewGroup {
 	private static final String TAG = MenuSquarePager.class.getSimpleName();
 
-	public static final int MENU_COUNT = 6;
+	public static final int MENU_COUNT = 4;
 	private ViewGroup mParent;
 	private final int textSize;
 	private int parentSize;
@@ -102,8 +102,8 @@ public class MenuSquarePager extends ViewGroup {
 		final MenuSquareUnit menu12 = new MenuSquareUnit(getContext(),i++,
 				startY,startY + menuHeight,startX,startX + menuWidth);
 		startX += (menuWidth + gapMenuH);
-		final MenuSquareUnit menu13 = new MenuSquareUnit(getContext(),i++,
-				startY,startY + menuHeight,startX,startX + menuWidth);
+		//final MenuSquareUnit menu13 = new MenuSquareUnit(getContext(),i++,
+		//		startY,startY + menuHeight,startX,startX + menuWidth);
 		
 		startX = getPaddingLeft() + gapLeft;
 		startY += (menuHeight + gapMenuV);
@@ -113,15 +113,15 @@ public class MenuSquarePager extends ViewGroup {
 		final MenuSquareUnit menu22 = new MenuSquareUnit(getContext(),i++,
 				startY,startY + menuHeight,startX,startX + menuWidth);
 		startX += (menuWidth + gapMenuH);
-		final MenuSquareUnit menu23 = new MenuSquareUnit(getContext(),i++,
-				startY,startY + menuHeight,startX,startX + menuWidth);
+		//final MenuSquareUnit menu23 = new MenuSquareUnit(getContext(),i++,
+		//		startY,startY + menuHeight,startX,startX + menuWidth);
 		
 		mMenus.add(menu11);
 		mMenus.add(menu12);
-		mMenus.add(menu13);
+		//mMenus.add(menu13);
 		mMenus.add(menu21);
 		mMenus.add(menu22);
-		mMenus.add(menu23);
+		//mMenus.add(menu23);
 		
 		for(MenuSquareUnit icon : mMenus){
 			addView(icon);

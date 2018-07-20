@@ -85,7 +85,7 @@ public class AppListUtil extends Observable implements Parcelable{
 	}
 	
 	public static int getMenuStyle(Context context){
-		return SysServices.getSystemSettingInt(context, SETTING_KEY_STYLE, MENU_STYLE_VERTICAL);
+		return SysServices.getSystemSettingInt(context, SETTING_KEY_STYLE, MENU_STYLE_SQUARE);
 	}
 	
 	public static String getMenuSkin(Context context){

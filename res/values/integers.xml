@@ -26,13 +26,13 @@
     
     <!--  MenuSquarePager Config -->
     <integer name="menu_square_pager_weight">400</integer>
-    <integer name="menu_square_pager_menu_width">90</integer>
-    <integer name="menu_square_pager_menu_height">130</integer>
+    <integer name="menu_square_pager_menu_width">130</integer>
+    <integer name="menu_square_pager_menu_height">170</integer>
     <integer name="menu_square_pager_text_height">25</integer>
-    <integer name="menu_square_pager_gap_top">55</integer>
-    <integer name="menu_square_pager_gap_left">25</integer>
+    <integer name="menu_square_pager_gap_top">25</integer>
+    <integer name="menu_square_pager_gap_left">45</integer>
     <integer name="menu_square_pager_gap_menu_h">40</integer>
-    <integer name="menu_square_pager_gap_menu_v">40</integer>
+    <integer name="menu_square_pager_gap_menu_v">25</integer>
     <integer name="menu_square_pager_gap_icon_text">5</integer>
     
     <integer name="item_clock_skin_choose_all">400</integer>
