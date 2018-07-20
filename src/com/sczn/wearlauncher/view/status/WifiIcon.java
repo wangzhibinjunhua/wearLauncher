@@ -109,7 +109,7 @@ public class WifiIcon extends StatusIconWithText {
 				mIcon.setImageResource(R.drawable.statu_icon_wifi_off);
 				break;
 			case WIFI_STATE_NO_CONNECTION:
-				mIcon.setImageResource(R.drawable.statu_icon_wifi_0);
+				mIcon.setImageResource(R.drawable.wifi0);
 				break;
 			default:
 				break;
@@ -128,19 +128,19 @@ public class WifiIcon extends StatusIconWithText {
 			wifiSignal = WifiManager.calculateSignalLevel(info.getRssi(), 4);
 			switch (wifiSignal) {
 				case WIFI_SIGNAL_3:
-					mIcon.setImageResource(R.drawable.statu_icon_wifi_4);
+					mIcon.setImageResource(R.drawable.wifi4);
 					break;
 				case WIFI_SIGNAL_2:
-					mIcon.setImageResource(R.drawable.statu_icon_wifi_3);
+					mIcon.setImageResource(R.drawable.wifi3);
 					break;
 				case WIFI_SIGNAL_1:
-					mIcon.setImageResource(R.drawable.statu_icon_wifi_2);
+					mIcon.setImageResource(R.drawable.wifi2);
 					break;
 				case WIFI_SIGNAL_0:
-					mIcon.setImageResource(R.drawable.statu_icon_wifi_1);
+					mIcon.setImageResource(R.drawable.wifi1);
 				default:
 					//wifiSignal = WIFI_SIGNAL_0;
-					mIcon.setImageResource(R.drawable.statu_icon_wifi_0);
+					mIcon.setImageResource(R.drawable.wifi0);
 					break;
 			}
 		}
